@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .trip-links {
+            margin-bottom: 20px;
+        }
+
+        .trip-links a {
+            margin-right: 15px;
+            color: dodgerblue;
+            text-decoration: none;
+        }
+
+        .trip-links a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="trips.html">My Trips</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+        <div class="welcome">Welcome Passenger_name !!!</div>
+    </nav>
+    <div class="container">
+        <h2>My Trips</h2>
+        <div class="trip-links">
+            <a href="#upcoming">Upcoming</a>
+            <a href="#cancelled">Cancelled</a>
+            <a href="#completed">Completed</a>
+        </div>
+        <div id="upcoming">
+            <h3>Upcoming Trips</h3>
+            <table>
+                <tr><th>Flight Name</th><th>Origin</th><th>Destination</th><th>Travel Date</th><th>Price</th></tr>
+                <tr><td>AA101</td><td>NYC</td><td>LAX</td><td>2025-08-01</td><td>$200</td></tr>
+                <tr><td>UA202</td><td>CHI</td><td>NYC</td><td>2025-08-15</td><td>$150</td></tr>
+                <tr><td>DL303</td><td>LAX</td><td>CHI</td><td>2025-09-01</td><td>$180</td></tr>
+            </table>
+        </div>
+        <div id="cancelled">
+            <h3>Cancelled Trips</h3>
+            <table>
+                <tr><th>Flight Name</th><th>Origin</th><th>Destination</th><th>Travel Date</th><th>Price</th></tr>
+                <tr><td>AA404</td><td>NYC</td><td>CHI</td><td>2025-07-01</td><td>$220</td></tr>
+                <tr><td>UA505</td><td>LAX</td><td>NYC</td><td>2025-07-15</td><td>$190</td></tr>
+                <tr><td>DL606</td><td>CHI</td><td>LAX</td><td>2025-06-01</td><td>$170</td></tr>
+            </table>
+        </div>
+        <div id="completed">
+            <h3>Completed Trips</h3>
+            <table>
+                <tr><th>Flight Name</th><th>Origin</th><th>Destination</th><th>Travel Date</th><th>Price</th></tr>
+                <tr><td>AA707</td><td>NYC</td><td>LAX</td><td>2025-05-01</td><td>$210</td></tr>
+                <tr><td>UA808</td><td>CHI</td><td>NYC</td><td>2025-04-15</td><td>$160</td></tr>
+                <tr><td>DL909</td><td>LAX</td><td>CHI</td><td>2025-03-01</td><td>$175</td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

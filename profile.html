@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-details div {
+            margin: 10px 0;
+        }
+
+        .edit-btn, .save-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .edit-btn {
+            background: dodgerblue;
+            color: white;
+        }
+
+        .save-btn {
+            background: green;
+            color: white;
+            display: none;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="trips.html">My Trips</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+        <div class="welcome">Welcome Passenger_name !!!</div>
+    </nav>
+    <div class="container">
+        <h2>My Profile</h2>
+        <div class="profile-details">
+            <div>First Name: <span id="first-name">John</span></div>
+            <div>Last Name: <span id="last-name">Doe</span></div>
+            <div>Date of Birth: <span id="dob">1990-01-01</span></div>
+            <div>Email: <span id="email">john.doe@example.com</span></div>
+            <div>Address: <span id="address">123 Main St, City</span></div>
+            <div>Contact: <span id="contact">1234567890</span></div>
+        </div>
+        <button class="edit-btn">Edit</button>
+        <button class="save-btn">Save</button>
+    </div>
+    <script>
+        const editBtn = document.querySelector('.edit-btn');
+        const saveBtn = document.querySelector('.save-btn');
+        const details = document.querySelectorAll('.profile-details div span');
+
+        editBtn.addEventListener('click', () => {
+            details.forEach(span => {
+                const input = document.createElement(span.tagName === 'SPAN' ? 'input' : 'textarea');
+                input.value = span.textContent;
+                input.id = span.id;
+                span.replaceWith(input);
+            });
+            editBtn.style.display = 'none';
+            saveBtn.style.display = 'block';
+        });
+
+        saveBtn.addEventListener('click', () => {
+            document.querySelectorAll('.profile-details input, .profile-details textarea').forEach(input => {
+                const span = document.createElement('span');
+                span.id = input.id;
+                span.textContent = input.value;
+                input.replaceWith(span);
+            });
+            editBtn.style.display = 'block';
+            saveBtn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

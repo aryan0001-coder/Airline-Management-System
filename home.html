@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Airline Management System</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding-right: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .welcome {
+            font-weight: bold;
+            font-family: 18px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .search-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-form .input-box {
+            margin: 15px 0;
+        }
+
+        .search-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .search-form input, .search-form select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-btn {
+            width: 100%;
+            padding: 10px;
+            background: dodgerblue;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #0047AB;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="trips.html">My Trips</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+        <div class="welcome">Welcome Passenger_name !!!</div>
+    </nav>
+    <div class="container">
+        <h1>Airline Management System</h1>
+        <div class="search-form">
+            <form id="search-form">
+                <div class="input-box">
+                    <label for="origin">Origin</label>
+                    <select id="origin">
+                        <option value="NYC">New York</option>
+                        <option value="LAX">Los Angeles</option>
+                        <option value="CHI">Chicago</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="destination">Destination</label>
+                    <select id="destination">
+                        <option value="NYC">New York</option>
+                        <option value="LAX">Los Angeles</option>
+                        <option value="CHI">Chicago</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="departure">Departure Date</label>
+                    <input type="date" id="departure">
+                </div>
+                <div class="input-box">
+                    <label for="travellers">No of Travellers</label>
+                    <input type="number" id="travellers" min="1">
+                </div>
+                <div class="input-box">
+                    <label for="class">Class</label>
+                    <select id="class">
+                        <option value="economy">Economy</option>
+                        <option value="executive">Executive</option>
+                        <option value="business">Business</option>
+                    </select>
+                </div>
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

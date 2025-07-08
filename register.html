@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Registration</title>
+    <script src="register.js"></script>
+    <style>
+        body {
+            background-color: teal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .register-container {
+            width: 500px;
+            background-color: #E8ECEF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            color: black;
+        }
+
+        .register-container h2 {
+            text-align: center;
+        }
+
+        .input-box {
+            margin: 15px 0;
+        }
+
+        .input-box label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-box input, .input-box textarea, .input-box select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .register-btn {
+            width: 48%;
+            padding: 10px;
+            background: dodgerblue;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #0047AB;
+        }
+
+        .reset-btn {
+            width: 48%;
+            padding: 10px;
+            background: gray;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        #success-message {
+            color: green;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div id="success-message"></div>
+        <div id="error-message" class="error"></div>
+        <h2>Passenger Registration</h2>
+        <form id="register-form">
+            <div class="input-box">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" maxlength="50">
+            </div>
+            <div class="input-box">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" maxlength="50">
+            </div>
+            <div class="input-box">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+            </div>
+            <div class="input-box">
+                <label for="email">Email ID</label>
+                <input type="email" id="email">
+            </div>
+            <div class="input-box">
+                <label for="address">Address</label>
+                <textarea id="address" maxlength="100"></textarea>
+            </div>
+            <div class="input-box">
+                <label for="contact">Contact Number</label>
+                <input type="text" id="contact" maxlength="10">
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+            <button type="button" class="reset-btn">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
